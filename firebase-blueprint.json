@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Report",
+      "description": "Civic issue report for NagarNetra Pune",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "userBadge": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "issueType": { "type": "string" },
+        "severity": { "type": "number" },
+        "severityLabel": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "address": { "type": "string" },
+        "status": { "type": "string" },
+        "verificationCount": { "type": "number" },
+        "verifiedBy": { "type": "array" },
+        "department": { "type": "string" },
+        "estimatedDimensions": { "type": "string" },
+        "safetyRisk": { "type": "string" },
+        "affectedArea": { "type": "string" },
+        "urgencyReason": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "userName", "title", "description", "issueType", "latitude", "longitude"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Civic active user member structure",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "points": { "type": "number" },
+        "reportCount": { "type": "number" },
+        "verificationCount": { "type": "number" },
+        "badges": { "type": "array" }
+      },
+      "required": ["id", "name"]
+    }
+  },
+  "firestore": {
+    "reports": {
+      "schema": "Report",
+      "description": "Collection of submitted civic issue reports"
+    },
+    "users": {
+      "schema": "User",
+      "description": "Collection of registered users"
+    }
+  }
+}

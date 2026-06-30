@@ -1,0 +1,9 @@
+{
+  "name": "NagarNetra",
+  "description": "NagarNetra is an AI-powered civic intelligence platform that helps communities report, track, and resolve local infrastructure issues using AI analysis and geographic mapping.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
